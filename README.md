@@ -36,9 +36,7 @@ L2RW
 
 ## Acknowledgement
 
-Some methods under ES protocol are implemented according to the official project, which can be found in [AGW](https://github.com/mangye16/ReID-Survey), [CAJ](https://github.com/mangye16/Cross-Modal-Re-ID-baseline/tree/master/ICCV21_CAJ), [Lba](https://github.com/cvlab-yonsei/LbA), [DEEN](https://github.com/ZYK100/LLCM). We thanks the authors for making those repositories public.
-
-The DNS is my another work which published in ECCV24, you can find the [paper](https://fq.pkwyx.com/default/https/www.ecva.net/papers/eccv_2024/papers_ECCV/papers/09119.pdf) and [code](https://github.com/Joey623/DNS).
+Compared methods under ES protocol are implemented according to the official project, which can be found in [AGW](https://github.com/mangye16/ReID-Survey), [CAJ](https://github.com/mangye16/Cross-Modal-Re-ID-baseline/tree/master/ICCV21_CAJ), [Lba](https://github.com/cvlab-yonsei/LbA), [DEEN](https://github.com/ZYK100/LLCM), [DNS](https://github.com/Joey623/DNS). We thanks the authors for making those repositories public.
 
 ## Contact
 
