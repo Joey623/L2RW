@@ -42,3 +42,14 @@ Compared methods under ES protocol are implemented according to the official pro
 
 If you have any questions, please feel free to open an issue or contact me via [jiangyan@nuist.edu.cn](jiangyan@nuist.edu.cn).
 
+## Citation
+```
+@inproceedings{jiang2025laboratory,
+  title={From laboratory to real world: A new benchmark towards privacy-preserved visible-infrared person re-identification},
+  author={Jiang, Yan and Yu, Hao and Cheng, Xu and Chen, Haoyu and Sun, Zhaodong and Zhao, Guoying},
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={8828--8837},
+  year={2025}
+}
+```
+
