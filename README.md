@@ -40,7 +40,7 @@ Compared methods under ES protocol are implemented according to the official pro
 
 ## Contact
 
-If you have any questions, please feel free to open an issue or contact me via [jiangyan@nuist.edu.cn](jiangyan@nuist.edu.cn).
+If you have any questions, please feel free to open an issue or contact me via [yan.jiang@oulu.fi](yan.jiang@oulu.fi).
 
 ## Citation
 ```
