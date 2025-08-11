@@ -40,7 +40,7 @@ python train_baseline.py \
     --max_epoch 100 \
     --data_root $LOCAL_SCRATCH/DATA\
     --sequence_length 10 \
-    --img_hw 256 128 \
+    --img_hw 288 144 \
 
 
 
