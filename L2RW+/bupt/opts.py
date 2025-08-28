@@ -26,7 +26,7 @@ class opts:
         # basic parameters
         self.parser.add_argument('--num_workers', type=int, default=4)
         self.parser.add_argument('--sequence_length', type=int, default=10)
-        self.parser.add_argument('--img_hw', nargs='+', type=int, default=(256, 128))
+        self.parser.add_argument('--img_hw', nargs='+', type=int, default=(288, 144))
         self.parser.add_argument('--norm_std', type=list, default=[0.229, 0.224, 0.225])
         self.parser.add_argument('--norm_mean', type=list, default=[0.485, 0.456, 0.406])
 

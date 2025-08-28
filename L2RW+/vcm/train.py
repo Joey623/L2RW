@@ -494,17 +494,6 @@ for epoch in range(start_epoch, args.max_epoch):
         representative_local_prototype.append(rep_local_proto)
 
 
-        # train_set[index].Index = sampler.index
-        # loader_batch = args.batch_size * args.num_pos
-        # trainloader = data.DataLoader(VideoDataset_train(train_set[index].train, seq_len=seq_lenth, sample='video_train', transform=transform_train),batch_size=loader_batch, sampler=sampler, drop_last=True,
-        #                               num_workers=args.workers)
-        # optimizer = client_optimizer[index]
-        # print("Client{} training".format(index + 1))
-        # w, rep_local_proto = train(epoch, client_optimizer[index], net=net[index], args=args,
-        #                            global_weight=global_weight, local_prototype=local_prototypes[index],
-        #                            global_prototype=global_prototype)
-        # weight_local.append(w)
-        # representative_local_prototype.append(rep_local_proto)
     if epoch >= 0:
         print('Start Communication...')
         global_weight = fed_avg(weight_local, identity_num)

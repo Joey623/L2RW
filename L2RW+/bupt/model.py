@@ -31,60 +31,6 @@ class base_module(nn.Module):
         x = self.base(x)
         return x
 
-class SELayer(nn.Module):
-    def __init__(self, channel, reduction=16):
-        super(SELayer, self).__init__()
-        self.avg_pool = nn.AdaptiveAvgPool2d(1)
-        self.fc = nn.Sequential(
-            nn.Linear(channel, channel // reduction, bias=False),
-            nn.ReLU(inplace=True),
-            nn.Linear(channel // reduction, channel, bias=False),
-            nn.Sigmoid()
-        )
-        self.l = nn.Conv2d(channel, channel,1)
-    def forward(self, x,f):
-        y = self.fc(x)
-        return f* y+f
-
-class temporal_feat_learning(nn.Module):
-    def __init__(self,  ):
-        super(temporal_feat_learning, self).__init__()
-        dim = 2048
-        self.se_1 = SELayer(2048)
-        self.se_2 = SELayer(2048)
-        self.se_3 = SELayer(2048)
-        self.se_4 = SELayer(2048)
-        self.se_5 = SELayer(2048)
-        self.se_6 = SELayer(2048)
-
-        self.a = nn.Linear(dim, dim)
-        self.b = nn.Linear(dim, dim)
-        self.c = nn.Linear(dim, dim)
-        self.d = nn.Linear(dim, dim)
-        self.e = nn.Linear(dim, dim)
-        self.f = nn.Linear(dim, dim)
-
-
-    def forward(self, t_x,x,x_h):
-        t1 = self.a(t_x)+x[0]
-        t2 = self.b(t_x)+x[1]
-        t3 = self.c(t_x)+x[2]
-        t4 = self.d(t_x)+x[3]
-        t5 = self.e(t_x)+x[4]
-        t6 = self.f(t_x)+x[5]
-
-        f1 = self.se_1(t1/2,x_h[0]).unsqueeze(dim=1)
-        f2 = self.se_2(t2/2,x_h[1]).unsqueeze(dim=1)
-        f3 = self.se_3(t3/2,x_h[2]).unsqueeze(dim=1)
-        f4 = self.se_4(t4/2,x_h[3]).unsqueeze(dim=1)
-        f5 = self.se_5(t5/2,x_h[4]).unsqueeze(dim=1)
-        f6 = self.se_6(t6/2,x_h[5]).unsqueeze(dim=1)
-
-        f = torch.cat((f1,f2,f3,f4,f5,f6),dim=1)
-        f = f.mean(dim=1)
-
-        return f
-
 
 class temporal_module(nn.Module):
     def __init__(self, feat_dim=2048):

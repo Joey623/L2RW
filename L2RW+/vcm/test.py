@@ -91,15 +91,15 @@ net = net.to(device)
 cudnn.benchmark = True
 
 # model_path = args.model_path + args.dataset + '/' + args.resume
-# model_path = './save_models/l2rw_vcm.pth'
-model_path = '../bupt/save_models/bupt.pth'
+model_path = './save_models/l2rw_vcm.pth'
+# model_path = '../bupt/save_models/bupt.pth'
 print('==> Loading weights from checkpoint......')
 checkpoint = torch.load(model_path)
 print('==> best epoch', checkpoint['epoch'])
 state_dict = checkpoint['net']
 filtered_state_dict = {k: v for k, v in state_dict.items() if 'classifier' not in k}
 
-    # 加载去掉分类头的参数
+# 加载去掉分类头的参数
 missing, unexpected = net.load_state_dict(filtered_state_dict, strict=False)
 
 print(f"Loaded with {len(missing)} missing and {len(unexpected)} unexpected keys.")
