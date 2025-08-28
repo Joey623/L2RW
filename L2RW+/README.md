@@ -55,26 +55,5 @@ This project is based on the [HITSZ-VCM ](https://github.com/VCM-project233/MITM
 
 If you have any questions, please feel free to open an issue or contact me via yan.jiang@oulu.fi.
 
-# #Citation
-
-````
-@inproceedings{jiang2025laboratory,
-  title={From laboratory to real world: A new benchmark towards privacy-preserved visible-infrared person re-identification},
-  author={Jiang, Yan and Yu, Hao and Cheng, Xu and Chen, Haoyu and Sun, Zhaodong and Zhao, Guoying},
-  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
-  pages={8828--8837},
-  year={2025}
-}
-
-@inproceedings{jiang2024domain,
-  title={Domain shifting: A generalized solution for heterogeneous cross-modality person re-identification},
-  author={Jiang, Yan and Cheng, Xu and Yu, Hao and Liu, Xingyu and Chen, Haoyu and Zhao, Guoying},
-  booktitle={European Conference on Computer Vision},
-  pages={289--306},
-  year={2024},
-  organization={Springer}
-}
-````
-
 
 
